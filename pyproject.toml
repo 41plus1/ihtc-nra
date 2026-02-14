@@ -1,0 +1,40 @@
+[project]
+name = "ihtc-nra"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas>=3.0.0",
+    "pulp>=3.3.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.1",
+]
+
+[tool.ruff]
+line-length = 100
+indent-width = 4
+
+[tool.ruff.lint]
+select = [
+	"ALL",
+]
+ignore = [
+	"B905",    # zip() without an explicit strict= parameter
+	"D100",    # Missing docstring in public module
+	"D101",    # Missing docstring in public class
+	"D103",    # Missing docstring in public function
+	"D104",    # Missing docstring in public package
+	"T201",    # print() found
+	"PLR0913",
+	"S311",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
